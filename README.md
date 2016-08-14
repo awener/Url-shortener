@@ -2,24 +2,24 @@
 # Basic usage
 npm install
 
-By default runs on http://localhost:3000/
+###By default runs on http://localhost:3000/
 
-API Calls
+##API Calls
 
-Minfiy URL
+###Minfiy URL
 
-Method - POST
+##Method - POST
 
-Example - curl --data "url=https://google.com' http://localhost:3000/api/new
+####Example - curl --data "url=https://google.com" http://localhost:3000/api/new
 
-Get Stats
+###Get Stats
 
-Example - curl --data "url=http://localhost:3000/msddwdw" http://localhost:3000/api/stats
+####Example - curl --data "url=http://localhost:3000/msddwdw" http://localhost:3000/api/stats
 
 
 
-Todo
+###Todo
 
-1.) Public / private links
+####1.) Public / private links
 
-2.) Table view for public links
+####2.) Table view for public links
