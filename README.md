@@ -6,19 +6,19 @@ npm install
 
 ##API Calls
 
-###Minfiy URL
+##Minfiy URL
 
 ##Method - POST
 
 ####Example - curl --data "url=https://google.com" http://localhost:3000/api/new
 
-###Get Stats
+##Get Stats
 
 ####Example - curl --data "url=http://localhost:3000/msddwdw" http://localhost:3000/api/stats
 
 
 
-###Todo
+##Todo
 
 ####1.) Public / private links
 
