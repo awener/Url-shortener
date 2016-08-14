@@ -8,7 +8,7 @@ exports.generate = function() {
 }
 
 exports.store = function(url, shorturl, callback) {
-	url = 'http://'+url;
+	
 	var newLink = new storage({
 		real_url: url,
 		short_url: shorturl
