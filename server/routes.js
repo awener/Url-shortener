@@ -1,4 +1,4 @@
-
+var config = require('./config/config');
 var redirect = require('./main');
 module.exports = function(app) {
 app.get('/', function(req, res) {
@@ -33,7 +33,7 @@ app.post('/', function(req, res) {
 
 	redirect.store(url, shortUrl, function(err) {
 		if(err) return res.status(500).end('Unable to store url, please try again.');
-		res.status(200).jsonp({url: url, shortUrl: 'http://localhost:3000/'+shortUrl});
+		res.status(200).jsonp({url: url, shortUrl: config.server+shortUrl});
 	});
 
 
