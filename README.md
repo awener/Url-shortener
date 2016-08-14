@@ -1,6 +1,7 @@
 # Url-shortener
 # Basic usage
 npm install
+
 By default runs on http://localhost:3000/
 
 API Calls
