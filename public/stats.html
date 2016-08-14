@@ -17,19 +17,15 @@ https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.min.js"></
 
         </style>
 </head>
-<body ng-app='linkApp' ng-controller='linkController'>
+<body ng-app='linkApp' ng-controller='linkController' ng-init='getStats();'>
 	
 	<div  class='col-md-4 col-md-offset-4' style='margin-top: 20%;'>
-		<div class="input-group">
-			<input ng-model='link' type="text" class="form-control" placeholder="https://www.your-address.com">
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" ng-click='generate(link);'>GO!</button>
-      </span>
-
-    </div>
-    <div style='text-align: center; color: red;'  ng-show='noUrl'>You need to insert url.</div>
-    <div style='text-align: center; color: red;'  ng-show='linkError'>{{linkError}}</div>
-    <div style='font-type: bold; text-align: center; color: white;'  ng-show='validUrl'><a href={{validUrl}} target='_blank'>{{validUrl}}</a></div>
+		<div style='text-align: center; color: red;'  ng-show='noLink'>{{noLink}}</div>
+        <div style='text-align: center; color: white;'  ng-show='link'>
+            <p>Real URL: {{link.real_url}}</p>
+            <p>Short URL: {{link.short_url}}</p>
+            <p>Total Views: {{link.views}}</p>
+        </div>
 	</div>
 
 

@@ -1,4 +1,21 @@
-angular.module('linkApp',[]).controller('linkController', function($scope, $http) {
+angular.module('linkApp',['ngRoute']).controller('linkController', function($scope, $http, $location) {
+	
+	$scope.getStats = function() {
+		
+		var url = $location.absUrl().split('3000/')[1].split('/stats')[0];
+		
+		
+		$http.post('/api/'+url+'/stats',{
+			url: url
+		}).then(function(result) {
+			
+			$scope.link = result.data.stats;
+		}, function(err) {
+			$scope.noLink = err.data
+			console.log(err);
+		})
+		
+	}
 
 	
 
@@ -15,5 +32,3 @@ angular.module('linkApp',[]).controller('linkController', function($scope, $http
 	}
 
 });
-
-
